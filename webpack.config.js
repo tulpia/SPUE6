@@ -16,7 +16,16 @@ module.exports = {
       }
     },
     devServer: {
-      contentBase: path.resolve(__dirname, 'public')
+      port: 3000,
+      contentBase: path.resolve(__dirname, 'public'),
+      overlay: {
+        warnings: true,
+        errors: true
+      },
+      proxy: {
+        '*': "http://localhost:80",
+        secure: false
+      }
     },
     module: {
       rules: [

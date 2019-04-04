@@ -10,5 +10,30 @@ a {
 
 .wrapper {
     width: $wrapperDesktop;
-    margin: 0 auto
+    margin: 0 auto;
+    position: relative;
+}
+
+.home {
+    background: rgb(161, 207, 228);
+}
+
+.vs-scroll-view {
+    display: none;
+}
+
+.loading-block {
+    position: fixed;
+    bottom: 100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $color-lightBlack;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 100;
+}
+
+body {
+    overflow-x: hidden;
 }
