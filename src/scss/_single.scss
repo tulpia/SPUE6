@@ -1,0 +1,124 @@
+.single {
+    background: rgb(12, 12, 12);
+
+    header {
+
+        .block-header {
+
+            a {
+                color: white;
+            }
+
+            p {
+                color: white;
+            }
+        }
+    }
+
+    .before {
+        font-family: $font;
+        color: $color-lightBlack;
+        font-size: 14px;
+        margin-right: 5px;
+
+        &.before--main-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+
+            &:after {
+                content: '';
+                bottom: 0;
+                left: 0;
+                background: $color-lightBlack;
+                width: 15px;
+                height: 1px;
+                position: absolute;
+            }
+        }
+    }
+
+    .title-container {
+        margin-top: 13rem;
+
+        h1 {
+            font-family: $font-medium;
+            line-height: 1.3;
+            color: white;
+            font-size: 72px;
+            margin-bottom: 40px;
+            -webkit-text-stroke: 1px white;
+            overflow: hidden;
+        }
+    }
+
+    .details-container {
+        display: flex;
+        width: 100%;
+
+        p {
+            font-family: $font;
+            font-size: 18px;
+            color: white;
+        }
+
+        .middle {
+            margin: 0 20px;
+        }
+    }
+
+    .infos-supp {
+        margin-top: 20px;
+        width: 100%;
+
+        p {
+            font-family: $font;
+            font-size: 18px;
+            color: white;
+
+            span {
+                margin: 0 20px;
+            }
+        }
+    }
+
+    .emprunt-container {
+        margin-top: 60px;
+        position: relative;
+
+        a,
+        p {
+            font-size: 18px;
+            color: white;
+            text-decoration: underline;
+            font-family: $font;
+            opacity: 1;
+            transform: translateY(0px);
+            position: relative;
+
+            &.hidden {
+                transform: translateY(-50px) !important;
+                opacity: 0;
+                transition: transform 250ms $curve,
+                    opacity 250ms linear;
+            }
+        }
+
+        .after_text {
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 250ms $curve,
+                opacity 250ms linear;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &.active {
+                transform: translateY(0px);
+                opacity: 1;
+                transition: transform 250ms $curve,
+                    opacity 250ms linear;
+            }
+        }
+    }
+}

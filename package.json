@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.3.1",
     "autoprefixer": "^9.4.7",
     "babel-loader": "^8.0.5",
+    "barba.js": "^1.0.0",
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^2.1.0",
     "cssnano": "^4.1.8",
@@ -39,8 +40,9 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
-    "bootstrap": "^4.2.1",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.7"
+    "axios": "^0.18.0",
+    "gsap": "^2.1.2",
+    "scrollmonitor": "^1.2.4",
+    "smooth-scrolling": "^2.3.11"
   }
 }

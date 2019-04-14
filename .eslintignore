@@ -1,6 +1,8 @@
 /node_modules/*
 public/*
 src/js/app.js
+src/js/home.js
+src/js/single.js
 src/index.js
 webpack.config.js
 postcss.config.js
