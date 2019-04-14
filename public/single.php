@@ -41,6 +41,13 @@ $livre = $bdd_query->fetchAll();
                     <p class="middle appearSingle">-</p>
                     <p class="genre appearSingle"><?= $livre[0]['categorie']; ?></p>
                 </section>
+                <section class="infos-supp appearSingle">
+                    <?php if (empty($livre[0]['date_emprunt'])) { ?>
+                        <p>Disponible <span>-</span> rendu le <?= $livre[0]['date_rendu'] ?></p>
+                    <?php } else { ?>
+                        <p>Non-disponible <span>-</span> emprunté le <?= $livre[0]['date_emprunt'] ?></p>
+                    <?php } ?>
+                </section>
                 <section class="emprunt-container appearSingle">
                     <?php if(empty($livre[0]['date_emprunt'])) { ?>
                         <a href="#" class="onEmprunt" data-name="<?= $livre[0]['id']; ?>">Emprunter le livre</a>
