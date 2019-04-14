@@ -41,14 +41,17 @@
             font-size: 18px;
         }
 
-        .item-container__categorie, .item-container__date-rendu, .item-container__date-emprunt {
+        .item-container__categorie,
+        .item-container__date-rendu,
+        .item-container__date-emprunt {
             width: 20%;
             font-size: 14px;
             color: $color-black;
             font-family: $font;
         }
 
-        p, a {
+        p,
+        a {
             font-size: 14px;
             font-family: $font;
             color: $color-lightBlack;
@@ -69,7 +72,7 @@
                 transform: translate(-50%, 150%);
                 opacity: 0;
                 transition: transform 150ms $curve,
-                            opacity 100ms linear;
+                    opacity 100ms linear;
             }
 
             &:hover {
@@ -77,7 +80,7 @@
                     transform: translate(-50%, 0%);
                     opacity: 0.7;
                     transition: transform 200ms $curve,
-                                opacity 250ms linear;
+                        opacity 250ms linear;
                 }
             }
         }
@@ -120,14 +123,14 @@
             height: auto;
             position: relative;
             z-index: 2;
-            
+
             .item-container__number {
                 font-size: 14px;
                 color: $color-black;
                 font-family: $font;
                 width: 10%;
             }
-    
+
             .item-container__title {
                 width: 30%;
                 font-family: $font-medium;
@@ -135,8 +138,10 @@
                 font-size: 18px;
                 transition: color 250ms linear;
             }
-    
-            .item-container__categorie, .item-container__date-rendu, .item-container__date-emprunt {
+
+            .item-container__categorie,
+            .item-container__date-rendu,
+            .item-container__date-emprunt {
                 width: 20%;
                 font-size: 14px;
                 color: $color-black;
@@ -145,12 +150,18 @@
             }
         }
 
-        
+
         &:hover {
             padding-left: 20px;
             transition: padding 350ms $curve;
+
             .block-liste__item-container {
-                .item-container__categorie, .item-container__date-rendu, .item-container__date-emprunt, .item-container__title, .item-container__number {
+
+                .item-container__categorie,
+                .item-container__date-rendu,
+                .item-container__date-emprunt,
+                .item-container__title,
+                .item-container__number {
                     color: white !important;
                     transition: color 250ms linear;
                 }
@@ -159,6 +170,12 @@
             &:after {
                 transform: translateY(0%);
                 transition: transform 350ms $curve;
+            }
+        }
+
+        &.taken {
+            p {
+                opacity: 0.5;
             }
         }
     }
@@ -174,12 +191,12 @@
     font-size: 16px;
     color: $color-black;
     transition: transform 500ms $curve,
-                opacity 250ms linear;
+        opacity 250ms linear;
 
     &.active {
         transform: translate(-50%, 0%);
         opacity: 1;
         transition: transform 500ms $curve,
-                opacity 250ms linear;
+            opacity 250ms linear;
     }
 }

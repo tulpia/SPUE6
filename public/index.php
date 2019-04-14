@@ -41,7 +41,11 @@ $requete_normal = $bdd_query->fetchAll();
                 <section class="block-liste__container">
                     <?php foreach ($requete_normal as $value) {
                     ?>
-                    <a class="item-link appearAccueil" href="single.php?id=<?= $value['id']; ?>">
+                    <?php if(isset($value['date_rendu'])) { ?>
+                        <a class="item-link appearAccueil" href="single.php?id=<?= $value['id']; ?>">
+                    <?php } else { ?>
+                        <a class="item-link taken appearAccueil" href="single.php?id=<?= $value['id']; ?>">
+                    <?php } ?>
                         <article class="block-liste__item-container">
                             <p class="item-container__number"><?= $value['id']; ?></p>
                             <p class="item-container__title"><?= $value["titre"]; ?></p>
